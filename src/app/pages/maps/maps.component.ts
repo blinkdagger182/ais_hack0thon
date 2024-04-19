@@ -10,6 +10,7 @@ declare const google: any;
   styleUrls: ['./maps.component.scss']
 })
 export class MapsComponent implements OnInit {
+  test: Date = new Date();
   map: any;
   markersData: any[] = [];
   markerCluster: any;
