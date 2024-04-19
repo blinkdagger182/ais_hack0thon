@@ -54,13 +54,13 @@ export class MapsComponent implements OnInit {
           <h2>${location.Name}</h2>
           <p>District: ${location.District}</p>
           <p>State: ${location.State}</p>
-          <p>Water Level: ${location['Water Level']}</p>
-          <p>Water Level Indicator: ${location['Water Level Indicator']}</p>
-          <p>Water Level Update Time: ${location['Water Level Update Time']}</p>
-          <p>Water Level Trend: ${location['Water Level Trend']}</p>
-          <p>Rainfall (Latest 1hr): ${location['Rainfall (Latest 1hr)']}</p>
-          <p>Rainfall Indicator: ${location['Rainfall Indicator']}</p>
-          <p>Rainfall Update Time: ${location['Rainfall Update Time']}</p>
+          ${location['Water Level'] !== 'null meters' ? `<p>Water Level: ${location['Water Level']}</p>` : ''}
+          ${location['Water Level Indicator'] !== 'null' ? `<p>Water Level Indicator: ${location['Water Level Indicator']}</p>` : ''}
+          ${location['Water Level Update Time'] !== 'null' ? `<p>Water Level Update Time: ${location['Water Level Update Time']}</p>` : ''}
+          ${location['Water Level Trend'] !== 'null' ? `<p>Water Level Trend: ${location['Water Level Trend']}</p>` : ''}
+          ${location['Rainfall (Latest 1hr)'] !== 'null' ? `<p>Rainfall (Latest 1hr): ${location['Rainfall (Latest 1hr)']}</p>` : ''}
+          ${location['Rainfall Indicator'] !== 'null' ? `<p>Rainfall Indicator: ${location['Rainfall Indicator']}</p>` : ''}
+          ${location['Rainfall Update Time'] !== 'null' ? `<p>Rainfall Update Time: ${location['Rainfall Update Time']}</p>` : ''}
         </div>
       `;
 
@@ -80,7 +80,7 @@ export class MapsComponent implements OnInit {
 
     // Set markers on the marker cluster
     // this.markerCluster.addMarkers(markers);
-    this.markerCluster = new MarkerClusterer({}, );
+    this.markerCluster = new MarkerClusterer({},);
     // console.log('markersdata:', this.markersData);
     const markerCluster = new MarkerClusterer({ map: this.map, markers });
   }
