@@ -19,7 +19,7 @@ export class MapsComponent implements OnInit {
 
     const mapOptions = {
       zoom: 8,
-      center: new google.maps.LatLng(lat, lng),
+      center: new google.maps.LatLng(4.2105, 101.9758),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
