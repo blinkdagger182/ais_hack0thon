@@ -1,0 +1,10 @@
+.background-image{
+  // --background: src('/assets/img/theme/water-bg.png');
+  // background-image: url('/assets/img/theme/water-bg.png');
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.833)), url('/assets/img/theme/water-bg.png');
+  /* Additional background properties */
+  background-size: cover; /* Adjust as needed */
+  background-position: center; /* Adjust as needed */
+  
+
+}
